@@ -40,3 +40,6 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('login'))
+
+def register():
+    return render_template('register.html',title = 'Registration')
