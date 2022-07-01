@@ -31,3 +31,7 @@ class RegisterForm(FlaskForm):
 class EditProfileForm(FlaskForm):
     about_me = TextAreaField('About me',validators=[Length(min=0,max=140)])
     submit = SubmitField('Save')
+
+class TweetForm(FlaskForm):
+    tweet = TextAreaField('Tweet',validators=[DataRequired(),Length(min=0,max=140)])
+    submit = SubmitField('Tweet')
