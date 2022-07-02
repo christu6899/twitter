@@ -1,8 +1,8 @@
-"""add user, tweet table:
+"""empty message
 
-Revision ID: e3f2561c24a5
+Revision ID: aa19e08dce7c
 Revises: 
-Create Date: 2022-07-02 21:46:30.602731
+Create Date: 2022-07-02 22:57:18.749543
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'e3f2561c24a5'
+revision = 'aa19e08dce7c'
 down_revision = None
 branch_labels = None
 depends_on = None
