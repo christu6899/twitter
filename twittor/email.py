@@ -12,7 +12,7 @@ def send_email(subject, recipients, text_body, html_body):
     msg = Message (
         subject = subject,
         recipients =recipients,
-        reply_to='christwittor689@gmail.com'
+        reply_to='aaaaasssss6899@gmail.com'
     )
     msg.body = text_body
     msg.html = html_body

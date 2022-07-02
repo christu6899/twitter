@@ -1,23 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Login</h1>
-    <form action="" method="post">
-        <p>
-            {{ form.username.label}}
-            {{ form.username()}}
-        </p>
-        <p>
-            {{ form.password.label}}
-            {{ form.password()}}
-        </p>
-        <p>
-            {{ form.remember_me()}}
-            {{ form.remember_me.label}}
-        </p>
-        <p>
-            {{ form.submit()}} 
-        </p>
-        <a href="{{ url_for('register') }}">New User?</a>or
-        <a href="{{ url_for('reset_password_request') }}">Forget Password?</a>
-    </form>
+
+<div class='row'>
+    <div class="text-center col-lg-4"></div>
+    <div class="text-center col-lg-4">
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+        <form action="" method="post">
+            <p>
+                {{ form.username.label}}
+                {{ form.username()}}
+            </p>
+            <p>
+                {{ form.password.label}}
+                {{ form.password()}}
+            </p>
+            <p>
+                {{ form.remember_me()}}
+                {{ form.remember_me.label}}
+            </p>
+            <p>
+                <button class="btn btn-lg btn-outline-primary" type="submit">Login</button> 
+            </p>
+            <p>
+                <a href="{{ url_for('register') }}">New User?</a>or
+                <a href="{{ url_for('reset_password_request') }}">Forget Password?</a>
+            </p>
+            <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+        </form>
+    </div>    
+</div>
 {% endblock%}

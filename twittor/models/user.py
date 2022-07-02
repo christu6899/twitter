@@ -1,4 +1,5 @@
 from twittor import db,login_manager
+from twittor.models.tweet import Tweet
 from flask_login import UserMixin
 from flask import current_app
 from werkzeug.security import generate_password_hash,check_password_hash
@@ -91,13 +92,3 @@ class User(UserMixin,db.Model):
 @login_manager.user_loader
 def load_user(id):
     return User.query.get(int(id))
-
-class Tweet(db.Model):
-    id = db.Column(db.Integer,primary_key=True)
-    body = db.Column(db.String(140))
-    create_time = db.Column(db.DateTime, default=datetime.utcnow)
-    user_id = db.Column(db.Integer,db.ForeignKey('user.id'))
-    def __repr__(self) -> str:
-        return "id={}, body={}, create_time={}, user_id={}".format(
-            self.id,self.body,self.create_time,self.user_id
-        )

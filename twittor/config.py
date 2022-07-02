@@ -10,8 +10,8 @@ class Config:
     MAIL_SERVER='smtp.gmail.com'
     MAIL_PORT=465
     MAIL_USE_SSL=True
-    MAIL_DEFAULT_SENDER=('admin', 'christwittor689@gmail.com')
+    MAIL_DEFAULT_SENDER=('admin', 'aaaaasssss6899@gmail.com')
     MAIL_MAX_EMAILS=10
-    MAIL_USERNAME='christwittor689'
-    MAIL_PASSWORD='fzolganxpiqvdpxd'
+    MAIL_USERNAME='aaaaasssss6899'
+    MAIL_PASSWORD='whicopcfnvsgsrnf'
     MAIL_SUBJECT_RESET_PASSWORD = '[Twittor] Please Reset Your Password'

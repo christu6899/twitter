@@ -1,7 +1,9 @@
+import imp
 from flask import render_template,redirect,url_for,request,abort,current_app,flash
 from flask_login import login_user, current_user,logout_user,login_required
 from twittor.forms import LoginForm,RegisterForm,EditProfileForm,TweetForm,PasswordResetRequestForm,PasswordResetForm
-from twittor.models import User,Tweet
+from twittor.models.user import User
+from twittor.models.tweet import Tweet
 from twittor import db
 from twittor.email import send_email
 
