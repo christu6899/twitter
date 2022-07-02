@@ -145,5 +145,20 @@ def password_reset(token):
         db.session.commit()
         return redirect(url_for('login'))
     return render_template('password_reset.html',title='Password Reset', form=form)
+    
 def page_not_found(e):
     return render_template('404.html'),404
+
+@login_required
+def explore():
+    page_num = int(request.args.get('page') or 1)
+    tweets =Tweet.query.order_by(Tweet.create_time.desc()).paginate(
+        page=page_num,per_page=current_app.config['TWEET_PER_PAGE'],
+        error_out=False)
+    next_url = url_for(
+        'explore',page=tweets.next_num) if tweets.has_next else None
+    prev_url = url_for(
+        'explore',page=tweets.prev_num) if tweets.has_prev else None
+    return render_template(
+        'explore.html',tweets=tweets.items,next_url=next_url,prev_url=prev_url
+        )

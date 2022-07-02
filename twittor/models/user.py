@@ -22,6 +22,7 @@ class User(UserMixin,db.Model):
     about_me = db.Column(db.String(140))
     create_time = db.Column(db.DateTime, default=datetime.utcnow)
     tweet = db.relationship('Tweet', backref='author', lazy='dynamic')
+    is_activate = db.Column(db.Boolean, default=False)
 
     followed = db.relationship(
         'User', secondary=followers,

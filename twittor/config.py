@@ -5,13 +5,13 @@ class Config:
     #SQLALCHEMY_DATABASE_URI="mysql+pymysql://root:2J4u6vm0-@localhost:3306/demo"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = 'abc123'
-    TWEET_PER_PAGE = 3
+    TWEET_PER_PAGE = 20
 
     MAIL_SERVER='smtp.gmail.com'
     MAIL_PORT=465
     MAIL_USE_SSL=True
     MAIL_DEFAULT_SENDER=('admin', 'aaaaasssss6899@gmail.com')
     MAIL_MAX_EMAILS=10
-    MAIL_USERNAME='aaaaasssss6899'
-    MAIL_PASSWORD='whicopcfnvsgsrnf'
+    MAIL_USERNAME='your account'
+    MAIL_PASSWORD='your email password'
     MAIL_SUBJECT_RESET_PASSWORD = '[Twittor] Please Reset Your Password'
